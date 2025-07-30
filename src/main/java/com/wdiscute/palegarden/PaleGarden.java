@@ -57,10 +57,50 @@ public class PaleGarden
 
     private void addCreativeTabItems(BuildCreativeModeTabContentsEvent event)
     {
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+        {
+            event.accept(ModBlocks.PALE_OAK_LOG);
+            event.accept(ModBlocks.PALE_OAK_WOOD);
+            event.accept(ModBlocks.STRIPPED_PALE_OAK_LOG);
+            event.accept(ModBlocks.STRIPPED_PALE_OAK_WOOD);
+            event.accept(ModBlocks.PALE_OAK_PLANKS);
+            event.accept(ModBlocks.PALE_OAK_STAIRS);
+            event.accept(ModBlocks.PALE_OAK_SLAB);
+            event.accept(ModBlocks.PALE_OAK_FENCE);
+            event.accept(ModBlocks.PALE_OAK_FENCE_GATE);
+            event.accept(ModBlocks.PALE_OAK_DOOR);
+            event.accept(ModBlocks.PALE_OAK_TRAPDOOR);
+            event.accept(ModBlocks.PALE_OAK_PRESSURE_PLATE);
+            event.accept(ModBlocks.PALE_OAK_BUTTON);
+
+            event.accept(ModBlocks.RESIN_BRICKS);
+            event.accept(ModBlocks.RESIN_BRICK_STAIRS);
+            event.accept(ModBlocks.RESIN_BRICK_SLAB);
+            event.accept(ModBlocks.RESIN_BRICK_WALL);
+            event.accept(ModBlocks.CHISELED_RESIN_BRICKS);
+        }
+
+
+        if(event.getTabKey() == CreativeModeTabs.NATURAL_BLOCKS)
+        {
+            event.accept(ModBlocks.PALE_MOSS_BLOCK);
+            event.accept(ModBlocks.PALE_MOSS_CARPET);
+            event.accept(ModBlocks.PALE_HANGING_MOSS);
+            event.accept(ModBlocks.RESIN_BLOCK);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.FUNCTIONAL_BLOCKS)
+        {
+            event.accept(ModItems.PALE_OAK_SIGN);
+            event.accept(ModItems.PALE_OAK_HANGING_SIGN);
+        }
+
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS)
         {
-            event.accept(ModItems.TANK);
+            event.accept(ModItems.RESIN_CLUMP);
         }
+
+
     }
 
 

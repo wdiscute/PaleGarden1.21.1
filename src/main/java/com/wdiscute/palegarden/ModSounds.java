@@ -3,6 +3,7 @@ package com.wdiscute.palegarden;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.sounds.SoundEvent;
+import net.minecraft.sounds.SoundEvents;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.common.util.DeferredSoundType;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -50,9 +51,17 @@ public class ModSounds
 
 
     public static final Supplier<SoundEvent> RESIN_BREAK = registerSoundEvent("block.resin.break");
-    public static final Supplier<SoundEvent> RESIN_FALL = registerSoundEvent("block.resin.fall");
-    public static final Supplier<SoundEvent> RESIN_PLACE = registerSoundEvent("block.resin.place");
     public static final Supplier<SoundEvent> RESIN_STEP = registerSoundEvent("block.resin.step");
+    public static final Supplier<SoundEvent> RESIN_PLACE = registerSoundEvent("block.resin.place");
+    public static final Supplier<SoundEvent> RESIN_FALL = registerSoundEvent("block.resin.fall");
+
+    public static final DeferredSoundType RESIN = new DeferredSoundType(1f, 1f,
+            ModSounds.RESIN_BREAK,
+            ModSounds.RESIN_STEP,
+            ModSounds.RESIN_PLACE,
+            ModSounds.RESIN_PLACE, //empty
+            ModSounds.RESIN_FALL
+    );
 
     public static final Supplier<SoundEvent> RESIN_BRICKS_BREAK = registerSoundEvent("block.resin_bricks.break");
     public static final Supplier<SoundEvent> RESIN_BRICKS_FALL = registerSoundEvent("block.resin_bricks.fall");
@@ -60,11 +69,14 @@ public class ModSounds
     public static final Supplier<SoundEvent> RESIN_BRICKS_PLACE = registerSoundEvent("block.resin_bricks.place");
     public static final Supplier<SoundEvent> RESIN_BRICKS_STEP = registerSoundEvent("block.resin_bricks.step");
 
-    public static final Supplier<SoundEvent> SPORE_BLOSSOM_BREAK = registerSoundEvent("block.spore_blossom.break");
-    public static final Supplier<SoundEvent> SPORE_BLOSSOM_FALL = registerSoundEvent("block.spore_blossom.fall");
-    public static final Supplier<SoundEvent> SPORE_BLOSSOM_HIT = registerSoundEvent("block.spore_blossom.hit");
-    public static final Supplier<SoundEvent> SPORE_BLOSSOM_PLACE = registerSoundEvent("block.spore_blossom.place");
-    public static final Supplier<SoundEvent> SPORE_BLOSSOM_STEP = registerSoundEvent("block.spore_blossom.step");
+
+    public static final DeferredSoundType RESIN_BRICKS = new DeferredSoundType(1f, 1f,
+            ModSounds.RESIN_BRICKS_BREAK,
+            ModSounds.RESIN_BRICKS_STEP,
+            ModSounds.RESIN_BRICKS_PLACE,
+            ModSounds.RESIN_BRICKS_HIT,
+            ModSounds.RESIN_BRICKS_FALL
+    );
 
 
     private static Supplier<SoundEvent> registerSoundEvent(String name) {
