@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:item/generated",
   "textures": {
-    "layer0": "minecraft:item/resin_brick"
+    "layer0": "palegarden:item/resin_brick"
   }
 }
